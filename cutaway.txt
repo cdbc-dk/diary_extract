@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+
+(*
+{ bcReformatString takes an input string and reformats the linebreaks to adhere to <= linelen }
+function bcReformatString(const aStr: string;aLinelen: ptrint): string;
+const
+  STRCOUNTRESIZER = 100; //Arbitrary value.
+var
+  Sa: TStringArray;          { string array to hold intermediary results }
+  SaCnt: ptrint;             { count of strings used }
+  StrAllocatedLimit: ptrint; { Currently allocated space for strings. }
+
+  procedure ResizeAllocatedStrings; { Resizes the allocated space for tmp strings }
+  begin
+    StrAllocatedLimit:= SaCnt + STRCOUNTRESIZER;
+    SetLength(Sa,StrAllocatedLimit);
+  end;
+
+  procedure AddStrToArray(const SubStr: string);inline; { Add a string to tmp result-set }
+  begin
+    if SaCnt = StrAllocatedLimit then ResizeAllocatedStrings;
+    Sa[SaCnt]:= SubStr;
+    inc(SaCnt);
+  end;
+var
+  S: string;
+  P,Pe,Pl,Ps: pchar; { actual, end, linelen marker, start }
+  I,Len,lLen: ptrint; { length of input & individual lines }
+begin
+  Result:= ''; if aStr = '' then exit(Result); { well duh...! }
+  SaCnt:= 0; StrAllocatedLimit:= 0;
+  SetLength(Sa,SaCnt);
+  Len:= Length(aStr); S:= '';
+  P:= pchar(aStr); Ps:= P; Pe:= P + Len; Pl:= P;
+  while P <= Pe do begin // maybe just <
+    if P^ in [#10,#13] then begin
+      S+= ' ';
+      Pl:= P; { make note of last space ' ' }
+    end else begin
+      S+= P^;
+      if P^ = ' ' then Pl:= P; { make note of last space ' ' }
+    end; { space & lf stuff }
+    lLen:= P - Ps;
+    if lLen >= aLinelen then begin
+      SetLength(S,(Pl-Ps));    { adjust line to last space entered }
+      AddStrToArray(S);        { add line to our temporary array }
+      P:= Pl; S:= ''; Ps:= Pl; { go back to last space, clear line and set start to last space }
+    end;
+    if P = Pe-1 then AddStrToArray(S); { add last string without the #0 }
+    inc(P);
+  end; { while }
+  SetLength(Sa,SaCnt); { resize to actual size }
+  for I:= 0 to Length(Sa)-1 do Result+= (Sa[I]+#10); { build result string }
+  SetLength(Sa,0); { free tmp array }
+end; { bcReformatString }
+*)
+
+

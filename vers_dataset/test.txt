@@ -1,0 +1,109 @@
+ * * Data extraction from daily diary within a date-range * *
+ * you can "reformat" by specifying -r in 1.st parameter.
+ * you can "debug" by specifying -d or both -dr in 1.st parameter.
+ * in debug-mode you can add date1?date2?filename.ext as 2.nd parameter
+ * example: ds_extract -dr 06.03.2023?19.03.2023?w1011.log
+
+--> Engine handle created: 140469932595328 00007FC1B46F1880
+--> Working on: /home/bc/src/sandbox/diary_extract/vers_dataset/db/daily_diary.db3
+--> Engine version: 4.27.07.2022
+12
+06.03.2023
+Nat: Rimelig med få afbrydelser, følelseløs i benene.
+Morgen: Lidt svimmel, men ellers ok.
+Formiddag: At være i bad føles som, at vaske skumgummi...
+Middag: Mødet med Randi varede længe nok. 
+                 Benene kom opad da vi kom hjem. 
+      
+
+11
+07.03.2023
+Nat: AV! har ik' haft et roligt minut inat, grrr. 
+Morgen: Ku' slet ikke bevæge mine ben, mine led var låst, 
+                 det gjorde sgu ondt at få dem igang igen.
+Formiddag: Faldt åbenbart i søvn, siddende ret op...
+Middag: Øvelser med rolly.
+
+
+10
+08.03.2023
+Nat: En rar nat til afveksling, kun vågen en gang.
+Morgen: Rart med et varmt bad, vandet føles mærkeligt på benene.
+Formiddag: Den sædvanlige tulren rundt, det er godt.
+Middag: Øvelser med rolly og hente post ind. stadig godt.
+Eftermiddag: Fik støv
+
+9
+09.03.2023
+Nat: Rimelig, få afbrydelser...
+Morgen: Omslag i vejret, Mine ben brænder og fryser, 
+                 de ka' slet ik' hit' u' a'et... Øv!
+Formiddag: Benene opad på sofaen med et tøppe over, træls.
+Middag: Ubehageligt at træne med rolly.
+Eftermidda
+
+8
+10.03.2023
+Nat: Dum lang nat!
+Morgen: Nøj, jeg slog mig igår, gjorde ondt i badet :-(
+Formiddag: Var med Bine til lægen, det var ikke rart at humpe rundt.
+Middag: Slikker mine sår efter igår, lidt ked af at alt er som det er.
+Eftermiddag: Øver lidt med rolly, 
+
+7
+11.03.2023
+Nat: Meget urolig og lang nat, smerter og kramper...
+Morgen: Træt og mørbanket.
+Formiddag: Jeg føler mig fjern undertrykt i hovedet af smerter.
+Middag: Svimmel under øvelser med rolly, var lige ved at falde.
+Eftermiddag: Trækker mig tilbage til senge
+
+6
+12.03.2023
+Nat: Urolig kunne ikke finde ro ved bare at ligge ned.
+Morgen: Jeg har det "træls" i benene og tung i hovedet.
+                  Kramper og spjæt i benene.
+Formiddag: Føler mig noget nedtrykt.
+Middag: Godt jeg har rolly for det kniber med balancen.
+Eft
+
+5
+13.03.2023
+Nat: Rimelig, få afbrydelser.
+Morgen: Jeg har bare "almindelig" ondt i benene,
+                  Det brænder under fødderne og leddene er stive.
+Formiddag: Morgenmad, skal ha' spist noget, før tandlægen.
+Middag: Tandlægebesøg, bare én mere av.
+Eft
+
+4
+14.03.2023
+Nat: Meget urolig, smerter og kramper.
+Morgen: vågnede med smerter overalt i benene og låste led.
+Formiddag: Øvelser med rolly for at hjælpe stivheden og kramperne...
+Middag: Det er ik' blevet bedre, må nok bare erkende, idag er en dum dag.
+Eftermidd
+
+3
+15.03.2023
+Nat: 
+Morgen: 
+Formiddag: 
+Middag: 
+Eftermiddag: 
+Aften: 
+
+
+2
+16.03.2023
+Nat: 
+Morgen: 
+Formiddag: 
+Middag: 
+Eftermiddag: 
+Aften: 
+
+
+--> Record count: 11
+--> Engine handle destroyed: 0 0000000000000000
+--> Done!
